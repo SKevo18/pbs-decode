@@ -6,15 +6,15 @@ sys.path.append('.')
 import setuptools
 
 
-__description__ = "Python Project Template" # FIXME
+__description__ = "PAY by Square decoding"
 __author__      = "SKevo"
-__copyright__   = "Copyright (c) 2021, SKevo"
+__copyright__   = "Copyright (c) 2023, Kevin Svitač"
 __credits__     = ["SKevo"]
 __license__     = "MIT"
-__version__     = "v1.0.0-beta"
+__version__     = "v1.0"
 __maintainer__  = "SKevo"
-__email__       = "me@kevo.link"
-__status__      = "4 - Beta"
+__email__       = "kevin@svit.ac"
+__status__      = "5 - Production/Stable"
 
 
 README_PATH = Path(__file__).parent.absolute() / Path('README.md')
@@ -31,7 +31,7 @@ __doc__ = __readme__
 
 
 setuptools.setup(
-    name = 'python_project_template', # FIXME
+    name = 'pbs_decode',
     packages = setuptools.find_packages(exclude=('tests',)),
 
     long_description=__readme__,
@@ -40,14 +40,14 @@ setuptools.setup(
     version = __version__,
     license = __license__,
     description = __description__,
-    keywords = [], # FIXME
+    keywords = ["pay by square", "decoding", "decompiler", "qr code", "square", "slovak", "sk"],
 
     author = __author__,
     author_email = __email__,
 
-    url = 'https://github.com/CWKevo/python-project-template', # FIXME
+    url = 'https://github.com/SKevo18/pbs-decode',
 
-    install_requires=[], # FIXME
+    install_requires=[],
 
     classifiers=[
         f'Development Status :: {__status__}',
@@ -57,6 +57,7 @@ setuptools.setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10'
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11'
     ],
 )

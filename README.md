@@ -1,45 +1,25 @@
-# Python project template
+# psb_decode
 
-A template for new Python projects.
+A Python 3 package to decode PAY by Square QR code data.
 
-## Features
+## Installation
 
-- Automatically builds [PDoc](https://pdoc3.github.io/pdoc/) documentation & uploads package to [PyPI](https://pypi.org) on new GitHub release, thanks to GitHub actions;
-- Tests with pyTest before uploading to PyPI (or you can test manually with `workflow-dispatch`);
-- Ready-to-go `setup.py` file;
-- Scripts to build documentation and compile as a Python package;
-- A to-do list below;
-- Possibly more ;)
+```bash
+pip install pbs_decode
+```
 
-## Your to-do list
+## Usage
 
-- [ ] Edit `# FIXME` lines to match your project;
-  - [ ] setup.py
-    - [ ] Package name
-    - [ ] License
-    - [ ] Version
-    - [ ] Author
-    - [ ] Author email
-    - [ ] Description
-    - [ ] Keywords
-    - [ ] Classifiers
-    - [ ] Repository URL
-- [ ] Setup virtualenv (`scripts/setup_virtualenv_windows.ps1` for Windows);
-- [ ] Rename `python_project_template` folder and start writing your source code;
-- [ ] Add your dependencies to `requirements.txt`;
-- [ ] Update .gitingore with your stuff;
-- [ ] Replace this `README.md` file with a fancier one;
-- [ ] Upload code to your GitHub repository;
-- [ ] Turn on GitHub pages and use `documentation` as your pages branch;
-- [ ] Add your editior to `.gitignore`;
-- [ ] Add your PyPI API key to GitHub secrets (`PYPI_API_TOKEN`);
-- [ ] When your are done, make a new release at GitHub to build documentation and upload to PyPI;
-  - Don't forget to bump version in `setup.py` everytime you do a new release!!!
+```python
+from pbs_decode import pbs_decode
 
-Generated documentation example: https://cwkevo.github.io/python-project-template
+# Read QR code and decode it
+extracted_data = ...
+decoded_data = pbs_decode(extracted_data)
+```
 
-That should be it. Happy coding!
+## Useful links
 
-If you have any questions or found a bug, please open a new issue in this repository.
-
-<a href="https://www.buymeacoffee.com/skevo"><img src="https://img.buymeacoffee.com/button-api/?text=Support me&emoji=🐣&slug=skevo&button_colour=ffa200&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
+- [Package to encode PAY by Square QR code data](https://bysquare.com/pay-by-square/)
+- [PAY by Square specification](https://www.sbaonline.sk/wp-content/uploads/2020/03/pay-by-square-specifications-1_1_0.pdf)
+- [PAY by Square website](https://bysquare.com/pay-by-square/)
